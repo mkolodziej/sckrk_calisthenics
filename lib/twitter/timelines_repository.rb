@@ -3,4 +3,8 @@ class TimelinesRepository
 		@timelines ||= {}
 		@timelines[user] ||= Timeline.new
 	end
+
+	def self.clear
+		@timelines = {}
+	end
 end

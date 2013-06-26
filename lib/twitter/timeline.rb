@@ -7,6 +7,12 @@ class Timeline
 		messages << message
 	end
 
+	def display_messages(&block)
+		messages.each do |message|
+			message.display(&block)
+		end
+	end
+
 	private
 
 	def messages

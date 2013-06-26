@@ -20,5 +20,11 @@ describe Timeline do
 
 		timeline.should_not include(not_posted)
 	end
+
+	it 'displays added messages' do
+		expect { |block|
+			timeline.display_messages(&block)
+		}.to yield_successive_args("Hello!", "Bye!")
+	end
 end
 
